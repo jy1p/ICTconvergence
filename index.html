@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jiyeon Pi</title>
+    <link rel = "stylesheet" href = "./index.css">
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header id = "header"> 
+        <nav class ="menu">
+            <ul>
+                <li><a href = "/index.html/menu/home.html" <b> Home</b></a></li>
+                <li><a href = "/index.html/menu/about.html" <b> About</b></a></li>
+                <li><a href = "/index.html/menu/projects.html" <b> Projects</b></a></li>
+                <li><a href = "/index.html/menu/future.html" <b> Future</b></a></li>
+                <li><a href = "/index.html/menu/more.html" <b> More</b></a></li>
+            </ul>
+        </nav>
+    </header> 
+<!--page 1-->
+  <div class="list"> <!--css 효과 적용을 위해 list 설정-->
+      <div class="one">
+       
+       
+        <span class="profile"><img src="/index.html/Photo/내 사진.jpg" width="500px;" height="500px" alt="my picture"/></span>
+       
+            <p class="txt-title"></p>
+            <script>
+             //타이핑 효과
+             //변수 선언
+            const $txt=document.querySelector(".txt-title"); 
+            const content="피지연 \n 환경/도시 공학자 포트폴리오" //타이핑 효과가 사용될 내용 적기
+            let contentIndex=0; //위의 'content'의 첫번째 글자부터 사용하기 위해, 0으로 초기화
+            // typing 함수
+            let typing=function(){ 
+                $txt.innerHTML +=content[contentIndex]; //$txt 안에 글자를 넣어주기, 즉 $txt에 content의 글자를 contentIndex 0번째부터 하니씩 넣어준다.
+                contentIndex++;
+                if(content[contentIndex]==="\n"){ //if 조건문으로 '\n'을 만나면, 한 줄을 띄어준다.
+                    $txt.innerHTML += "<br/>";
+                    contentIndex++; //다음 글자로 넘어가기 위해 ++을 사용해 하나씩 증가시켜주기
+                    
+                   
+                }
+                if(contentIndex>content.length){ //변수가 content
+                    $txt.textContent="";
+                    contentIndex=0; //마지막 글자까지 화면에 출력된다면 다시 비어있는 상태로 만들어준다.
+                }
+            
+                
+            };
+            //0.2초 간격으로 typing 함수가 반복할 수 있도록 만들어준다.
+            setInterval(typing,200);
+          
+  
+        </script>
+        <h3>안녕하세요. <br>도시와 환경을 사랑하는 도시/환경 공학자입니다 <br> 성실하고 체계적인 성격, 배우는 삶을 즐깁니다. </h3>
+      </div>
+  </div>
+
+
+<!--page 2-->
+  <div class="list">  <!--css 효과 적용을 위해 list 설정-->
+      <div class ="two">
+        
+        <h1>About Me</h1>
+        <div class = "about">
+            <div class="lists">
+                <!--전체적인 구조: 이미지 밑에 내용이 나타나도록 반복적으로 코드 작성-->
+                <img class = "list_img" src="/index.html/Photo/사람.jpg" alt="사람모양"> 
+                <p class = "list_text"> <strong>이름</strong><br>피지연</p>
+                <br>
+            </div>
+
+            <div class="lists">
+                <img class = "list_img" src="/index.html/Photo/달력.jpg" alt="달력모양">
+                <p class = "list_text"> <strong>생년월일</strong><br>2003.05.30</p>
+                <br>
+            </div>
+
+            <div class="lists">
+                <img class = "list_img" src="/index.html/Photo/학사모.jpg" alt="학사모">
+                <p class = "list_text"> <strong>학력</strong><br>한동대학교 재학중</p>
+                <br>
+            </div>
+      <div class="lists">
+                <img class = "list_img" src="/index.html/Photo/e.jpg" alt="경험">
+                <p class = "list_text"> <strong>Experience</strong><br>우즈베이커리 알바(7개월)<br>식당 알바(4개월)</p>
+                <br>
+            </div>
+        </div>
+
+      </div>
+  </div>
+
+
+  <!--page3-->
+  <div class="list">  <!--css 효과 적용을 위해 list 설정-->
+      <div class="three">
+        <!--전체적인 구조: 왼쪽에 사진/ 오른쪽에 해당 사진 설명, 총 4개의 부분으로 구성-->
+        <h1> Projects</h1>
+        <br>
+        <br>
+        <img src ="/index.html/Photo/도시재생.png" alt="" width="280px;" height="300px">  
+        <h2 class ="intext"> <strong>Project 01<br>도시재생</strong> <!--글자에 따로 class를 주어 css효과를 적용했다.-->
+          전주 한옥마을을 대상으로<br>
+          도시재생사업이 실질적으로 도시재생에  <br>
+          미친 영향을 통합적 관점에서 분석하고<br> 새로운 정책 방향을 제시하였다. <br>
+          분석하고 새로운 정책 방향을 제시하였다. <br>
+          -Pohang Girls' High School Awared gold medal 
+          </h2>
+          <br>
+          <img src ="/index.html/Photo/공공정책.jpg" alt="" width="280px;" height="300px"> 
+          <h2 class ="intext"> <strong>Project 02<br>공공정책 제안서</strong><br><br>
+          포항지역에서 실시한 정책 현황에<br>
+          대한 인식 설문조사를 실행한 후, 심각성을 깨닫고  <br>
+          생활편익시설과 청소년 복합 문화센터 설립을 <br>
+          제안하는 제안서를 포항시에 제출하였다. <br>
+         -인데미트(club) activities <br>
+           
+            </h2>
+                   
+      </div>
+      <div class="three">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src ="/index.html/Photo/한필.png" alt="" width="280px;" height="300px">  <!--이 부분 class 다시 고치기-->
+        <h2 class ="intext"> <strong>Project 03<br>가상정부-한.필 FTA</strong>
+          가상정부 활동으로<br>
+          한국과 필리핀이 FTA 협정을  <br>
+          체결하는 과정을 보고서로 과정하였다. <br>
+          농식품부장관으로써 우리 농업의 <br>
+          보호와 동시에 국민의 권리를 보장하는 <br>
+          절충안을 마련했다. <br>
+          </h2>
+          <br>
+          <img src ="/index.html/Photo/동아리.jpg" alt="" width="280px;" height="300px"> 
+          <h2 class ="intext"> <strong>Project 04<br>농업스터디</strong><br><br>
+          매주 한그리(동아리)에서 스마트팜에 대해<br>
+          공부하고 농업관련 기사를 발표한다.  <br>
+          특별활동으로 스마트팜 견학과 <br>
+          실무에 계시는 선배님과 면담, <br>
+          담당 교수님 농장 방문을 등을 한다.<br>
+           
+            </h2>
+                   
+      </div>
+  </div>
+
+
+  <!--page4-->
+  <div class="list"> <!--[중간평가때 계획]usemap을 쓰려고 했지만 시도가 어려워져, 글자로 해당 페이지로 이동하는 방법을 썼다.-->
+    <div class = "four">
+        <!--전체적인 구조: 글자를 클릭하면 해당 내용의 페이지로 이동-->
+        <h1> Future</h1>
+        <br>
+        <img src ="/index.html/Photo/사진.png" width="700px" height="300px">
+        <br>
+        <br>
+        <br>
+        <a href="/index.html/future/work.html" class="ct"> Career</a>
+        <a href="/index.html/future/neighbor.html" class="ct">For the neighbors</a>
+        <a href="/index.html/future/personal.html" class="ct">Personal</a>
+    </div>
+</div>
+
+
+<!--page 5-->
+<div class="list">
+<div class="five">
+    <!--전체적인 구조: 왼쪽 사진/오른쪽 내용(설명)-->
+    <h1> More</h1>
+    <img src ="/index.html/Photo/study.jpg" alt="" width="300px;" height="300px"> 
+    <img src ="/index.html/Photo/cityfarm.jpg" alt="" width="300px;" height="300px">
+    <h2 class ="fivetext"> <strong>자격증<br></strong>
+      -워드프로세서 자격증<br>
+      -PPT 자격증  <br>
+      -2종 운전면허 <br>
+      -(준비중) 컴퓨터 자격증 1급 <br>
+      -(준비중) 도시 계획 기사 <br>
+      -(준비중) 도시농업 관리자 <br>
+      </h2>
+      <br>
+      <br>
+      <img src ="/index.html/Photo/KakaoTalk_20221002_154333033_02.jpg" alt="" width="300px;" height="300px"> 
+      <img src ="/index.html/Photo/youflower.jpg" alt="" width="300px;" height="300px"> 
+      <h2 class ="fivetext"> <strong>취미<br></strong>
+      -시집 읽기<br>
+      -반려동물와 산책하기  <br>
+      -간단한 헬스<br>
+      -노래 플레이리스트 만들기
+     
+        </h2>
+               
+  </div>
+</div>
+
+</body>
+</html>
